@@ -7,7 +7,7 @@ Kitabın Başından İtibaren Genel Tekrar
 == : Eşit //x ve y değeri birbirine eşit mi diğer kontrol ifadesi (Sadece x , y)
 != : Eşit Değil
 <= : Küçük Eşit
->= : Büyük Eşit //d
+>= : Büyük Eşit //
 && : Veya //Birden fazla parametre için kullanılır.
 || : Ve 
 
