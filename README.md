@@ -7,9 +7,9 @@ Kitabın Başından İtibaren Genel Tekrar
 == : Eşit //x ve y değeri birbirine eşit mi diğer kontrol ifadesi (Sadece x , y)
 != : Eşit Değil
 <= : Küçük Eşit
->= : Büyük Eşit //
+>= : Büyük Eşit 
 && : Veya //Birden fazla parametre için kullanılır.
-|| : Ve 
+|| : Ve //Birden fazla parametre için bütün koşulları sağlaması gereken durumlarda kullanılır.
 
 /* Eşitlik */
 int x = 9;
@@ -208,4 +208,76 @@ do
     Sayi++;
 } while (Sayi > 5);
 
+~~~
+
+
+## Döngüyü Kesme (Durdurma) & Döngüyü Devam Ettirme 
+~~~cs  
+int a = 0;
+while (a<10){
+    MessageBox.Show(“Döngü Çalışıyor.”);
+    if (a == 9)
+    {
+        MessageBox.Show(“Döngü Durdu.”);
+        break;
+    }
+    a++;
+    if(a == 5){
+        continue;
+        a++;
+    }
+ }
+
+~~~
+
+
+## Try-Catch-Finally
+~~~cs  
+Try = Hata OLMADAN derlenip çalıştırılan kodlar.
+Catch = (Exception <$Parametre>) İle çalışan sytax veya DeBug Fix'e girerek hata yazdıran method 
+Finally = (Genellikle Kullanılmaz) Hata dahi olsa derlenmeye devam edicek olan kod bloğu 
+
+Kullanımı;
+
+try {
+
+} catch (Exception Err) {
+     MessageBox.Show("Hata Mesajı", "Hata İle Derlenen Kod" + Err , MessageBoxButtons.OK , MessageBoxIcon.Warning);
+} finally {
+
+}
+~~~
+
+
+## Yapıcı / Yıkıcı Methodlar
+~~~cs  
+
+
+
+~~~
+
+
+## Class , Nesne Oluşturma
+~~~cs  
+class = Sınıf değişkeni , aktivate olarak çalışan bağımlı bir tür.
+
+#Seçiciler 
+private : Başka bir sınıfdan çağrılması esnasında erişim belirleyiciler ile tanımlanması gerekmekte
+public : Heryerden çekilebilen erişim engeli olmayan sınıf
+protected : Korumalı sınıf , seçici'dir. Kendi içersinde kendi parametresi ile oluşturulan sınıflardan veri aktarımı yapılabilir.
+internal : Dahili sayfa içerisinde veri kullanımına izin verir harici sayfadan çekim sağlamaz.
+protected interna : Kendi sınıfını başka bir sayfada türetse bile sadece Args[] açıldığı sayfada kullanılır.
+
+#Void ?
+Void değeri olmayan , değer döndürmeyen veri tipi demektir classlarda en fazla kullanılan referanstır.
+
+private void Class_Name() {
+
+}
+
+Voidsiz sınıf lar ise değer döndürür.
+
+private int Class_Name(int a; int b;){
+    return a + b;
+}
 ~~~
